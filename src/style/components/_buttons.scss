@@ -1,0 +1,18 @@
+.button {
+    border: none;
+    outline: none;
+    background-color: $yellow;
+    font-family: 'Poppins', sans-serif;
+    color: $black-text;
+    font-weight: 700;
+    padding: 8px 25px;
+    font-size: $font-18px;
+    border-radius: 25px;
+    letter-spacing: 0.5px;
+    transition: all 0.3s;
+    &:hover {
+        background-color: $white-text;
+        transform: scale(0.9);
+        cursor: pointer;
+    }
+}

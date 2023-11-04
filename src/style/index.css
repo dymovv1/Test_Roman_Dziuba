@@ -1,0 +1,273 @@
+/* poppins-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../assets/fonts/poppins-v20-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* poppins-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../assets/fonts/poppins-v20-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* poppins-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../assets/fonts/poppins-v20-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* poppins-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../assets/fonts/poppins-v20-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* poppins-800 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../assets/fonts/poppins-v20-latin-800.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* dela-gothic-one-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Dela Gothic One";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../assets/fonts/dela-gothic-one-v15-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  vertical-align: top;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #333333;
+  background-image: url("../assets/img/background.png");
+  background-blend-mode: multiply;
+}
+
+h1 {
+  font-family: "Dela Gothic One";
+  color: #d8f920;
+  font-size: 3.5rem;
+}
+
+.container {
+  max-width: 1380px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+li, span, p {
+  color: #fbfbfb;
+}
+
+.up-header {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 100px;
+}
+.up-header__img {
+  max-height: 15px;
+}
+
+.header-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #d8f920;
+}
+.header-logo {
+  max-width: 130px;
+}
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding-bottom: 25px;
+}
+.header-search__img {
+  width: 25px;
+  cursor: pointer;
+}
+.header-search {
+  outline: none;
+  border: none;
+  background: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  color: #fbfbfb;
+  font-weight: 600;
+  visibility: hidden;
+  display: none;
+}
+.header-search__block {
+  display: inline-flex;
+}
+.header-search.is-visible {
+  visibility: visible;
+  border-bottom: 1px solid #fbfbfb;
+  display: block;
+}
+.header-nav__li {
+  list-style: none;
+  font-size: 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+}
+.header-nav__li:hover {
+  color: #d8f920;
+}
+.header-nav__li::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #fbfbfb;
+  position: relative;
+  top: 45px;
+  visibility: hidden;
+}
+.header-nav__li:hover:after {
+  visibility: visible;
+}
+
+.burger-menu {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.burger-line {
+  display: block;
+  height: 2.5px;
+  width: 40px;
+  background-color: #d8f920;
+  transition: all 0.3s;
+}
+.burger-menu.is-active {
+  padding: 5px 20px;
+  border: 1px solid #fbfbfb;
+}
+.burger-line.is-active {
+  width: 7px;
+  border-radius: 25px;
+  padding: 3px;
+}
+
+.none-list {
+  list-style: none;
+}
+
+@media screen and (max-width: 880px) {
+  .header-nav {
+    display: none;
+  }
+  .header-nav.is-active {
+    display: flex;
+    flex-direction: column;
+  }
+  .header-nav__li::after {
+    display: none;
+  }
+  .burger-menu {
+    padding-bottom: 15px;
+  }
+}
+.main {
+  padding-top: 70px;
+}
+.main-title, .main-body {
+  display: flex;
+  justify-content: space-between;
+}
+.main-body {
+  padding-top: 100px;
+  background-image: url(../assets/img/back_things.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+}
+.main-body {
+  gap: 50px;
+}
+.main-title__img {
+  max-width: 200px;
+}
+.main-title__text {
+  font-size: 3.5rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+.main-body__img {
+  max-width: 700px;
+  background-image: url("../assets/img/body_back.png");
+  background-size: cover;
+}
+.main-body__title {
+  font-size: 36px;
+  color: #d8f920;
+  font-weight: 600;
+  margin-bottom: 25px;
+  max-width: 240px;
+}
+.main-body__text {
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 1150px) {
+  .main-body {
+    flex-direction: column;
+    align-items: center;
+    background-position: center;
+    gap: 30px;
+  }
+}
+@media screen and (max-width: 880px) {
+  .main-title {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+  .main-body__img {
+    max-width: 400px;
+    min-width: 380px;
+  }
+}
+.button {
+  border: none;
+  outline: none;
+  background-color: #d8f920;
+  font-family: "Poppins", sans-serif;
+  color: #0f0f0f;
+  font-weight: 700;
+  padding: 8px 25px;
+  font-size: 1.125rem;
+  border-radius: 25px;
+  letter-spacing: 0.5px;
+  transition: all 0.3s;
+}
+.button:hover {
+  background-color: #fbfbfb;
+  transform: scale(0.9);
+  cursor: pointer;
+}/*# sourceMappingURL=index.css.map */
